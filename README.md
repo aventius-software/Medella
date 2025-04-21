@@ -10,13 +10,21 @@ It is designed by mostly ex-NHS (and some current NHS) employees, with decades o
 - Cover all aspects of NHS health support, such as community, primary/secondary care and patient facing (e.g. patient app for accessing their own health record)
 - Cloud first hosting model which is easy to setup, manage and host, whilst being considerably cheaper than purchasing a new system usually costing in the millions of pounds (GBP)
 - Conforming to the latest IG (Information Governance) and data governance standards required by the NHS
-- Following data standards laid out in the NHS data dictionary and accompanying datasets
+- Following data items and standards laid out in the NHS data dictionary and accompanying datasets
 - Back end database and front end applications designed with the latest standards and technology
 - Modular so to be easy to expand to add new modules for services
 - Highly testable (e.g. unit testing) applications and databases
 - Output for national returns and datasets
 - Easy to use data warehousing and business intelligence focused reporting and analysis at local, strategic area and national levels
 - Integration with other existing health systems using standards such as FHIR etc...
+
+# Usage
+
+See the accompanying license... but basically you are free to use this software but completely at your own risk. None of the creators or collaborators will be held responsible for anything coming from the use of this software
+
+# Getting started with development
+
+Currently the project is built using Visual Studio 2022 with .NET 9 and SQL Server database projects
 
 # Contribution
 
