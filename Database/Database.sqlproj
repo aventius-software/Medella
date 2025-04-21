@@ -46,6 +46,7 @@
     <DefineTrace>true</DefineTrace>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <TreatTSqlWarningsAsErrors>True</TreatTSqlWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
@@ -57,5 +58,41 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="Patient\" />
+    <Folder Include="Patient\Tables\" />
+    <Folder Include="Security\" />
+    <Folder Include="Person\" />
+    <Folder Include="Person\Tables\" />
+    <Folder Include="Database Tools" />
+  </ItemGroup>
+  <ItemGroup>
+    <ArtifactReference Include="$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\AzureV12\SqlSchemas\master.dacpac">
+      <HintPath>$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\AzureV12\SqlSchemas\master.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
+      <DatabaseVariableLiteralValue>master</DatabaseVariableLiteralValue>
+    </ArtifactReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Patient\Tables\Patient.Record.sql" />
+    <Build Include="Security\Patient.sql" />
+    <Build Include="Patient\Tables\Patient.ReasonPatientDoesNotHaveIndependentMentalHealthAdvocate.sql" />
+    <Build Include="Patient\Tables\Patient.ReasonPatientDoesNotHaveIndependentMentalCapacityAdvocate.sql" />
+    <Build Include="Patient\Tables\Patient.NHSNumberStatusIndicatorCode.sql" />
+    <Build Include="Patient\Tables\Patient.ConsentObtainedIndicatorForNationalJointRegistryRecordingData.sql" />
+    <Build Include="Patient\Tables\Patient.CarerSupportIndicator.sql" />
+    <Build Include="Person\Tables\Person.Record.sql" />
+    <Build Include="Security\Person.sql" />
+    <Build Include="Patient\Tables\Patient.ReasonableAdjustmentRequiredIndicator.sql" />
+    <Build Include="Patient\Tables\Patient.ConsentObtainedIndicatorForCareProfessionalContact.sql" />
+    <Build Include="Person\Tables\Person.NewSexPartnersInTheLastThreeMonthsIndicator.sql" />
+    <Build Include="Person\Tables\Person.LookedAfterChildIndicator.sql" />
+    <Build Include="Person\Tables\Person.ExBritishArmedForcesIndicator.sql" />
+    <Build Include="Person\Tables\Person.SexWorkerIndicator.sql" />
+    <Build Include="Person\Tables\Person.PrisonerIndicator.sql" />
+    <Build Include="Person\Tables\Person.ParentalResponsibilitiesIndicator.sql" />
+    <Build Include="Person\Tables\Person.NumberOfSexPartnersInTheLastThreeMonthsCode.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Database Tools\SqlSchemaCompare.scmp" />
   </ItemGroup>
 </Project>

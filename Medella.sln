@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35919.96 d17.13
+VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Database", "Database\Database.sqlproj", "{134A12D3-840E-44DC-9082-3B0729385428}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medella", "Medella\Medella.csproj", "{F39EB8B6-5277-949F-4DD1-694AE1978B10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medella.Client", "Medella.Client\Medella.Client.csproj", "{D10FBFB0-A935-2EE9-B022-6DC3618AE65B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +21,14 @@ Global
 		{134A12D3-840E-44DC-9082-3B0729385428}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{134A12D3-840E-44DC-9082-3B0729385428}.Release|Any CPU.Build.0 = Release|Any CPU
 		{134A12D3-840E-44DC-9082-3B0729385428}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F39EB8B6-5277-949F-4DD1-694AE1978B10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F39EB8B6-5277-949F-4DD1-694AE1978B10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F39EB8B6-5277-949F-4DD1-694AE1978B10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F39EB8B6-5277-949F-4DD1-694AE1978B10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D10FBFB0-A935-2EE9-B022-6DC3618AE65B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D10FBFB0-A935-2EE9-B022-6DC3618AE65B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D10FBFB0-A935-2EE9-B022-6DC3618AE65B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D10FBFB0-A935-2EE9-B022-6DC3618AE65B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
