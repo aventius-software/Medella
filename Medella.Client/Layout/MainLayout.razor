@@ -4,6 +4,8 @@
 <MudPopoverProvider />
 <MudDialogProvider />
 <MudSnackbarProvider />
+
+@*
 <MudLayout>
     <MudAppBar Elevation="1">
         <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
@@ -19,7 +21,62 @@
         @Body
     </MudMainContent>
 </MudLayout>
+*@
 
+<MudLayout>
+    <MudAppBar Elevation="4">
+        
+        @* App icon *@
+        <MudHidden Breakpoint="Breakpoint.SmAndDown">
+            <MudIcon Icon="@Icons.Material.Filled.HealthAndSafety" />
+        </MudHidden>
+
+        @* Application name *@    
+        <MudHidden Breakpoint="Breakpoint.SmAndDown">
+            <MudText Typo="Typo.h5" Class="ml-3 mr-4">Apertio</MudText>
+        </MudHidden>
+
+        @* Drawer toggle button *@
+        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
+
+        <MudSpacer />
+        @*<AppSearch />*@
+        <MudSpacer />
+        
+        @* App bar tools - on small screens we display the tools in a vertical menu *@
+        <MudHidden Breakpoint="Breakpoint.SmAndDown" Invert="true">
+            <MudMenu Icon="@Icons.Material.Filled.MoreVert" AnchorOrigin="Origin.BottomCenter" TransformOrigin="Origin.TopCenter">
+                <MudMenuItem>
+                    <MudIconButton Icon="@(DarkLightModeButtonIcon)" Color="Color.Surface" OnClick="DarkModeToggle" />
+                </MudMenuItem>
+                @* <MudMenuItem>
+                    <MudIconButton Icon="@Icons.Material.Filled.Help" Color="Color.Surface" OnClick="NavigateToUserHelp" />                    
+                </MudMenuItem> *@
+            </MudMenu>
+        </MudHidden>
+
+        @* App bar tools - on larger screens we can display the tools horizontally in the toolbar *@
+        <MudHidden Breakpoint="Breakpoint.MdAndUp" Invert="true">            
+            <MudTooltip Text="Toggle between light and dark themes">
+                <MudIconButton Icon="@(DarkLightModeButtonIcon)" Color="Color.Inherit" OnClick="DarkModeToggle" />
+            </MudTooltip>
+            @* <MudTooltip Text="Help and support">
+                <MudIconButton Icon="@Icons.Material.Filled.Help" Color="Color.Inherit" OnClick="NavigateToUserHelp" />
+            </MudTooltip> *@
+        </MudHidden>
+
+        @* User login/logout *@
+        @*<LoginDisplay />*@
+    </MudAppBar>
+    <MudDrawer @bind-Open="_drawerOpen" ClipMode="DrawerClipMode.Always" Elevation="25">
+        <NavMenu />
+    </MudDrawer>    
+    <MudMainContent>
+        <MudContainer MaxWidth="MaxWidth.False">
+            @Body
+        </MudContainer>
+    </MudMainContent>
+</MudLayout>
 
 <div id="blazor-error-ui" data-nosnippet>
     An unhandled error has occurred.

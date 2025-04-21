@@ -1,8 +1,16 @@
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using MudBlazor.Services;
 
-var builder = WebAssemblyHostBuilder.CreateDefault(args);
+namespace Medella.Client;
 
-builder.Services.AddMudServices();
+internal class Program
+{
+    static async Task Main(string[] args)
+    {
+        var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
-await builder.Build().RunAsync();
+        builder.Services.AddMudServices();
+
+        await builder.Build().RunAsync();
+    }
+}
