@@ -1,5 +1,7 @@
-using Medella.Components;
+using Medella.Shared;
+using Microsoft.AspNetCore.Components.WebAssembly.Services;
 using MudBlazor.Services;
+using Module.Patient.Server.Shared;
 
 namespace Medella;
 
@@ -10,12 +12,16 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         // Add MudBlazor services
-        builder.Services.AddMudServices();
+        builder.Services.AddMudServices();        
 
         // Add services to the container.
         builder.Services.AddRazorComponents()
             .AddInteractiveServerComponents()
             .AddInteractiveWebAssemblyComponents();
+
+        // Add other services
+        builder.Services.AddScoped<LazyAssemblyLoader>();
+        builder.Services.AddPatientModuleServices(builder.Configuration.GetConnectionString("Patient")!);
 
         var app = builder.Build();
 
@@ -27,6 +33,7 @@ public class Program
         else
         {
             app.UseExceptionHandler("/Error", createScopeForErrors: true);
+
             // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
             app.UseHsts();
         }
@@ -40,7 +47,7 @@ public class Program
         app.MapRazorComponents<App>()
             .AddInteractiveServerRenderMode()
             .AddInteractiveWebAssemblyRenderMode()
-            .AddAdditionalAssemblies(typeof(Medella.Client._Imports).Assembly);
+            .AddAdditionalAssemblies(typeof(Medella.WebApp.Client._Imports).Assembly);
 
         app.Run();
     }

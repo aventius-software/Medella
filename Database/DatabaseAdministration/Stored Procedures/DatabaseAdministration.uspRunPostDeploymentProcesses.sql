@@ -1,0 +1,4 @@
+﻿CREATE PROCEDURE DatabaseAdministration.uspRunPostDeploymentProcesses AS
+BEGIN
+	EXEC [DatabaseAdministration].[uspSeedPatientCarerSupportIndicator]
+END

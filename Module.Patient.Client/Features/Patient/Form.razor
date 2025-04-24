@@ -1,0 +1,38 @@
+﻿@inherits FormBase
+
+<MudGrid>
+    <MudItem xs="12" sm="7">
+        <MudPaper Class="pa-4">
+            <MudForm @ref="@MudFormRef" Validation="@Validator.ValidateValue" ValidationDelay="0" Model="@FormModel">
+
+                <MudTextField @bind-Value="@FormModel.InternalKey"
+                              Label="Patient Key"
+                              ReadOnly="true"
+                              HelperText="Identity key generated automatically by the database"
+                              For="() => FormModel.InternalKey" />
+
+                <MudTextField @bind-Value="@FormModel.CommunityHealthIndexNumber"
+                              Label="Community Health Index Number"
+                              Immediate="true"                              
+                              For="() => FormModel.CommunityHealthIndexNumber" />
+                              
+            </MudForm>   
+        </MudPaper>
+        <MudPaper Class="pa-4 mt-4">
+            <MudButton Variant="Variant.Filled"
+                       Color="Color.Primary"
+                       Class="mx-2"
+                       Disabled="SubmitButtonIsDisabled"
+                       OnClick="async () => await OnSubmit()">Save</MudButton>
+
+            @* @if (Key > 0)
+            {
+                <MudButton Variant="Variant.Filled"
+                           Color="Color.Warning"
+                           Class="mx-2"
+                           Disabled="SubmitButtonIsDisabled"
+                           OnClick="OnClickDelete">Delete</MudButton>
+            } *@
+        </MudPaper>
+    </MudItem>    
+</MudGrid>
