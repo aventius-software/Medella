@@ -3,21 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Database", "Database\Database.sqlproj", "{134A12D3-840E-44DC-9082-3B0729385428}"
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Database", "Databases\Database\Database.sqlproj", "{134A12D3-840E-44DC-9082-3B0729385428}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medella", "Medella\Medella.csproj", "{F39EB8B6-5277-949F-4DD1-694AE1978B10}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medella", "Apps\Medella\Medella.csproj", "{F39EB8B6-5277-949F-4DD1-694AE1978B10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medella.WebApp.Client", "Medella.WebApp.Client\Medella.WebApp.Client.csproj", "{D10FBFB0-A935-2EE9-B022-6DC3618AE65B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medella.WebApp.Client", "Apps\Medella.WebApp.Client\Medella.WebApp.Client.csproj", "{D10FBFB0-A935-2EE9-B022-6DC3618AE65B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.Server", "Services.Server\Services.Server.csproj", "{1952E059-915B-4E3A-A829-09ACD90950F3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.Server", "Services\Services.Server\Services.Server.csproj", "{1952E059-915B-4E3A-A829-09ACD90950F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module.Patient.Client", "Module.Patient.Client\Module.Patient.Client.csproj", "{6DA647BA-9B8B-416E-9F43-092548669571}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module.Patient.Client", "Modules\Module.Patient.Client\Module.Patient.Client.csproj", "{6DA647BA-9B8B-416E-9F43-092548669571}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module.Patient.Shared", "Module.Patient.Shared\Module.Patient.Shared.csproj", "{20BE0E81-8709-496D-A229-FDFAB17F4D2C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module.Patient.Shared", "Modules\Module.Patient.Shared\Module.Patient.Shared.csproj", "{20BE0E81-8709-496D-A229-FDFAB17F4D2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.Shared", "Services.Shared\Services.Shared.csproj", "{E05D6AE7-DC28-459D-8404-3AB5049DAC3F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.Shared", "Services\Services.Shared\Services.Shared.csproj", "{E05D6AE7-DC28-459D-8404-3AB5049DAC3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.Client", "Services.Client\Services.Client.csproj", "{15C09026-5A91-46DA-A71B-15CE34FA7049}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.Client", "Services\Services.Client\Services.Client.csproj", "{15C09026-5A91-46DA-A71B-15CE34FA7049}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Databases", "Databases", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -27,7 +27,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{00
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{081397A7-47D7-4959-8928-4E349F8166C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module.Patient.Server", "Module.Patient.Server\Module.Patient.Server.csproj", "{313ECEC3-FC26-4605-AA0C-CC3131000927}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module.Patient.Server", "Modules\Module.Patient.Server\Module.Patient.Server.csproj", "{313ECEC3-FC26-4605-AA0C-CC3131000927}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

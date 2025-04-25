@@ -18,7 +18,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\Module.Patient.Client\Module.Patient.Client.csproj" />
+	  <ProjectReference Include="..\..\Modules\Module.Patient.Client\Module.Patient.Client.csproj" />
+	  <ProjectReference Include="..\..\Services\Services.Client\Services.Client.csproj" />
+	  <ProjectReference Include="..\..\Services\Services.Shared\Services.Shared.csproj" />
 	</ItemGroup>
 
 </Project>

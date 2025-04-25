@@ -11,9 +11,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\..\Modules\Module.Patient.Server\Module.Patient.Server.csproj" />
+		<ProjectReference Include="..\..\Services\Services.Server\Services.Server.csproj" />
+		<ProjectReference Include="..\..\Services\Services.Shared\Services.Shared.csproj" />
 		<ProjectReference Include="..\Medella.WebApp.Client\Medella.WebApp.Client.csproj" />
-		<ProjectReference Include="..\Module.Patient.Server\Module.Patient.Server.csproj" />
-		<ProjectReference Include="..\Services.Server\Services.Server.csproj" />
 	</ItemGroup>
 	
 </Project>
