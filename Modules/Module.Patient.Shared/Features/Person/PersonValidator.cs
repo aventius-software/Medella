@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
 using Services.Shared.Validation;
 
-namespace Module.Patient.Shared.Person;
+namespace Module.Patient.Shared.Features.Person;
 
 public class PersonValidator : AbstractFluentValidationValidator<PersonRecord>
 {

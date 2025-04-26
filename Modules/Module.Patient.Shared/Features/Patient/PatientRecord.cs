@@ -1,6 +1,6 @@
 ﻿using Services.Shared.Models;
 
-namespace Module.Patient.Shared.Patient;
+namespace Module.Patient.Shared.Features.Patient;
 
 public class PatientRecord : DataModelBase<long>
 {    

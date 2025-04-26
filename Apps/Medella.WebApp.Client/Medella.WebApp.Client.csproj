@@ -13,9 +13,9 @@
 		<PackageReference Include="MudBlazor" Version="8.*" />
 	</ItemGroup>
 
-	<ItemGroup>
+	<!--<ItemGroup>
 		<BlazorWebAssemblyLazyLoad Include="Module.Patient.Client.wasm" />
-	</ItemGroup>
+	</ItemGroup>-->
 
 	<ItemGroup>
 	  <ProjectReference Include="..\..\Modules\Module.Patient.Client\Module.Patient.Client.csproj" />

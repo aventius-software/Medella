@@ -1,8 +1,11 @@
 ﻿using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Module.Patient.Shared.Patient;
-using Module.Patient.Shared.Person;
+using Module.Patient.Server.Features.Patient;
+using Module.Patient.Shared.Features.Patient;
+using Module.Patient.Shared.Features.Person;
+using Services.Server.Endpoints;
+using System.Runtime.CompilerServices;
 
 namespace Module.Patient.Server.Shared;
 
@@ -18,6 +21,12 @@ public static class PatientModuleServerExtensions
             // as you need Microsoft.Data.Client >= v3 for Azure AD auth with SQL!
             options.UseSqlServer(connectionStringName);
         }, ServiceLifetime.Transient);
+
+        // Add data service for patient
+        services.AddScoped<IPatientDataService, PatientDataService>();
+
+        // Add this modules API endpoints
+        services.AddEndpoints(typeof(PatientModuleServerExtensions).Assembly);
 
         // Add OData services for this module      
         //mvcBuilder.AddOData(options => options.AddRouteComponents(ODataRoutes.ModulePrefix, ReportingODataEdmModel.GetEdmModel()));

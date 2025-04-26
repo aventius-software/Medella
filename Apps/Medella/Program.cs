@@ -2,9 +2,14 @@ using Medella.Shared;
 using Microsoft.AspNetCore.Components.WebAssembly.Services;
 using MudBlazor.Services;
 using Module.Patient.Server.Shared;
+using Services.Client.Data;
+using Services.Server.Endpoints;
 
 namespace Medella;
 
+/// <summary>
+/// For security/accounts with Entra, see https://github.com/dotnet/blazor-samples/tree/main/9.0/BlazorWebAppEntra
+/// </summary>
 public class Program
 {
     public static void Main(string[] args)
@@ -12,15 +17,14 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         // Add MudBlazor services
-        builder.Services.AddMudServices();        
+        builder.Services.AddMudServices();
 
         // Add services to the container.
         builder.Services.AddRazorComponents()
             .AddInteractiveServerComponents()
             .AddInteractiveWebAssemblyComponents();
-
-        // Add other services
-        builder.Services.AddScoped<LazyAssemblyLoader>();
+        
+        // Add module services
         builder.Services.AddPatientModuleServices(builder.Configuration.GetConnectionString("Patient")!);
 
         var app = builder.Build();
@@ -39,8 +43,6 @@ public class Program
         }
 
         app.UseHttpsRedirection();
-
-
         app.UseAntiforgery();
 
         app.MapStaticAssets();
@@ -48,6 +50,8 @@ public class Program
             .AddInteractiveServerRenderMode()
             .AddInteractiveWebAssemblyRenderMode()
             .AddAdditionalAssemblies(typeof(Medella.WebApp.Client._Imports).Assembly);
+
+        app.MapEndpoints();
 
         app.Run();
     }

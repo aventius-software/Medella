@@ -1,4 +1,4 @@
-﻿using Module.Patient.Shared.Patient;
+﻿using Module.Patient.Shared.Features.Patient;
 using Services.Client.Forms;
 
 namespace Module.Patient.Client.Features.Patient;

@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Module.Patient.Shared.Patient;
-using Module.Patient.Shared.Person;
+using Module.Patient.Shared.Features.Patient;
+using Module.Patient.Shared.Features.Person;
 
 namespace Module.Patient.Server.Shared;
 

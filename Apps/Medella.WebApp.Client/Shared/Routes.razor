@@ -1,11 +1,6 @@
 ﻿@inherits RoutesBase
 
-<Router AppAssembly="typeof(Program).Assembly" AdditionalAssemblies="@LazyLoadedAssemblies" OnNavigateAsync="@OnNavigateAsync">
-    @* <Navigating>
-        <div style="padding:20px;background-color:blue;color:white">
-            <p>Loading the requested page&hellip;</p>
-        </div>
-    </Navigating> *@
+<Router AppAssembly="typeof(Program).Assembly" AdditionalAssemblies="@LazyLoadedAssemblies">    
     <Found Context="routeData">
         <RouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)" />
         <FocusOnNavigate RouteData="routeData" Selector="h1" />
