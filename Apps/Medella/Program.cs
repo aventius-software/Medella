@@ -1,8 +1,7 @@
+using Asp.Versioning;
 using Medella.Shared;
-using Microsoft.AspNetCore.Components.WebAssembly.Services;
-using MudBlazor.Services;
 using Module.Patient.Server.Shared;
-using Services.Client.Data;
+using MudBlazor.Services;
 using Services.Server.Endpoints;
 
 namespace Medella;
@@ -23,7 +22,24 @@ public class Program
         builder.Services.AddRazorComponents()
             .AddInteractiveServerComponents()
             .AddInteractiveWebAssemblyComponents();
-        
+
+        // Configure API versioning
+        builder.Services.AddApiVersioning(options =>
+        {
+            // Define the different ways of reading the api version            
+            options.ApiVersionReader = ApiVersionReader.Combine(
+                new QueryStringApiVersionReader("api-version"),
+                new HeaderApiVersionReader("x-version"),
+                new MediaTypeApiVersionReader("ver"));
+
+            // Assume and use the default version (1) if no version specified
+            options.AssumeDefaultVersionWhenUnspecified = true;
+            options.DefaultApiVersion = new ApiVersion(1);
+
+            // Return supported versions
+            options.ReportApiVersions = true;
+        });
+
         // Add module services
         builder.Services.AddPatientModuleServices(builder.Configuration.GetConnectionString("Patient")!);
 
@@ -51,8 +67,10 @@ public class Program
             .AddInteractiveWebAssemblyRenderMode()
             .AddAdditionalAssemblies(typeof(Medella.WebApp.Client._Imports).Assembly);
 
+        // Map all the minimal API endpoints we've added
         app.MapEndpoints();
 
+        // Lets go ;-)
         app.Run();
     }
 }

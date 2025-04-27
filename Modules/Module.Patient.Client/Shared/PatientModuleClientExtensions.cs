@@ -8,8 +8,7 @@ public static class PatientModuleClientExtensions
 {
     public static IServiceCollection AddPatientModuleServices(this IServiceCollection services)
     {
-        services.AddScoped<IPatientDataService, PatientDataService>();
-
-        return services;
+        // Register the client version of the patient data service
+        return services.AddScoped<IPatientDataService, PatientDataService>();
     }
 }

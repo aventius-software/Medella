@@ -31,6 +31,8 @@ public static class EndpointExtensions
     /// <summary>
     /// Maps all previously added endpoints using AddEndpoints. Taken from 
     /// https://www.milanjovanovic.tech/blog/automatically-register-minimal-apis-in-aspnetcore
+    /// also see 
+    /// https://learn.microsoft.com/en-us/aspnet/core/tutorials/min-web-api?view=aspnetcore-9.0&tabs=visual-studio
     /// </summary>
     /// <param name="app"></param>
     /// <param name="routeGroupBuilder"></param>
