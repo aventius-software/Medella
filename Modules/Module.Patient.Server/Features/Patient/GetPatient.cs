@@ -28,6 +28,7 @@ public class GetPatient : IEndpoint
             return TypedResults.Ok(new PatientRecord
             {
                 InternalKey = id,
+                CommunityHealthIndexNumber = "hello",
                 HealthAndCareNumber = "example"
             });
         })

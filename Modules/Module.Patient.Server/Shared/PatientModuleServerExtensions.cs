@@ -5,6 +5,7 @@ using Module.Patient.Server.Features.Patient;
 using Module.Patient.Shared.Features.Patient;
 using Module.Patient.Shared.Features.Person;
 using Services.Server.Endpoints;
+using Services.Shared.Data;
 
 namespace Module.Patient.Server.Shared;
 
@@ -21,8 +22,8 @@ public static class PatientModuleServerExtensions
             options.UseSqlServer(connectionStringName);
         }, ServiceLifetime.Transient);
 
-        // Add data services for this module
-        services.AddScoped<IPatientDataService, PatientDataService>();
+        // Add server side data services for this module
+        services.AddScoped<IDataService<PatientRecord, long>, PatientDataService>();
         
         // Add all the endpoints in this module
         services.AddEndpoints(typeof(PatientModuleServerExtensions).Assembly);

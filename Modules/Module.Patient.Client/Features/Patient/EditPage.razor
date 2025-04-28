@@ -1,0 +1,12 @@
+﻿@attribute [Route($"{ClientRoutes.EditPatientPage}/{{{nameof(PatientKey)}:long}}")]
+
+<PageTitle>Edit patient</PageTitle>
+
+<h2>Edit patient</h2>
+
+<Form Key="@PatientKey" />
+
+@code {
+    [Parameter]
+    public long PatientKey { get; set; }
+}
