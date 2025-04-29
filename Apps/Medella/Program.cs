@@ -40,6 +40,9 @@ public class Program
             options.ReportApiVersions = true;
         });
 
+        builder.Services.AddEndpointsApiExplorer();
+        builder.Services.AddSwaggerGen();
+
         // Add module services
         builder.Services.AddPatientModuleServices(builder.Configuration.GetConnectionString("Patient")!);
 
@@ -49,6 +52,8 @@ public class Program
         if (app.Environment.IsDevelopment())
         {
             app.UseWebAssemblyDebugging();
+            app.UseSwagger();
+            app.UseSwaggerUI();
         }
         else
         {
