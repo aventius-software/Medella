@@ -35,6 +35,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests.Services.Server", "Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests.Services.Client", "Tests\Tests.Services.Client\Tests.Services.Client.csproj", "{09D65D8C-387A-40CA-B324-2B7D30E47660}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataDictionaryParser", "Tools\DataDictionaryParser\DataDictionaryParser.csproj", "{4BDD28C7-0271-4C8D-9246-36B0610E34C7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{7BCB82DF-3B02-4952-8BFB-2FF957C5487A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +91,10 @@ Global
 		{09D65D8C-387A-40CA-B324-2B7D30E47660}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09D65D8C-387A-40CA-B324-2B7D30E47660}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09D65D8C-387A-40CA-B324-2B7D30E47660}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BDD28C7-0271-4C8D-9246-36B0610E34C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BDD28C7-0271-4C8D-9246-36B0610E34C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BDD28C7-0271-4C8D-9246-36B0610E34C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BDD28C7-0271-4C8D-9246-36B0610E34C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -103,6 +111,7 @@ Global
 		{313ECEC3-FC26-4605-AA0C-CC3131000927} = {B03A386D-D5B7-416B-A562-1442DAC3669B}
 		{CC3AB476-5A4B-42B6-840E-38B86DCFF875} = {27DA377D-6FCE-4B8C-A9FE-5B4C8B24461B}
 		{09D65D8C-387A-40CA-B324-2B7D30E47660} = {27DA377D-6FCE-4B8C-A9FE-5B4C8B24461B}
+		{4BDD28C7-0271-4C8D-9246-36B0610E34C7} = {7BCB82DF-3B02-4952-8BFB-2FF957C5487A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {79B7904B-AAC5-475B-89BA-DAB49E33EB66}

@@ -1,5 +1,5 @@
 ﻿CREATE TABLE [Patient].[ConsentObtainedIndicatorForNationalJointRegistryRecordingData] (
-    [InternalKey]         SMALLINT      IDENTITY (1, 1) NOT NULL,
+    [InternalKey]         SMALLINT      NOT NULL,
     [DateTimeCreated]     DATETIME      CONSTRAINT [DF_PatientConsentObtainedIndicatorForNationalJointRegistryRecordingData_DateTimeCreated] DEFAULT (getdate()) NOT NULL,
     [DateTimeUpdated]     DATETIME      NULL,
     [DateTimeDeleted]     DATETIME      NULL,
@@ -7,8 +7,11 @@
     [ValidToDate]         DATE          CONSTRAINT [DF_PatientConsentObtainedIndicatorForNationalJointRegistryRecordingData_ValidToDate] DEFAULT ('9999-12-31') NOT NULL,
     [NationalCode]        TINYINT       NOT NULL,
     [NationalDescription] VARCHAR (500) NOT NULL,
+    [ShortDescription]    VARCHAR (50)  NULL,
     CONSTRAINT [PK_ConsentObtainedIndicatorForNationalJointRegistryRecordingData] PRIMARY KEY CLUSTERED ([InternalKey] ASC)
 );
+
+
 
 
 

@@ -7,9 +7,11 @@
     [ValidToDate]         DATE          CONSTRAINT [DF_CarerSupportIndicator_ValidToDate] DEFAULT ('9999-12-31') NOT NULL,
     [NationalCode]        CHAR (2)      NOT NULL,
     [NationalDescription] VARCHAR (500) NOT NULL,
-    [ShortDescription]    VARCHAR (50)  NOT NULL,
+    [ShortDescription]    VARCHAR (50)  NULL,
     CONSTRAINT [PK_CarerSupportIndicator] PRIMARY KEY CLUSTERED ([InternalKey] ASC)
 );
+
+
 
 
 

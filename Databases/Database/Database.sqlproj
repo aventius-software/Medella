@@ -67,6 +67,9 @@
     <Folder Include="DatabaseAdministration\" />
     <Folder Include="DatabaseAdministration\Stored Procedures\" />
     <Folder Include="Deployment Scripts" />
+    <Folder Include="Patient\Stored Procedures\" />
+    <Folder Include="DataDictionary\" />
+    <Folder Include="DataDictionary\Tables\" />
   </ItemGroup>
   <ItemGroup>
     <ArtifactReference Include="$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\AzureV12\SqlSchemas\master.dacpac">
@@ -97,6 +100,16 @@
     <Build Include="DatabaseAdministration\Stored Procedures\DatabaseAdministration.uspRunPostDeploymentProcesses.sql" />
     <Build Include="DatabaseAdministration\Stored Procedures\DatabaseAdministration.uspSeedPatientCarerSupportIndicator.sql" />
     <Build Include="Security\DatabaseAdministration.sql" />
+    <Build Include="Patient\Stored Procedures\Patient.uspGetRecordByKey.sql" />
+    <Build Include="DatabaseAdministration\Stored Procedures\DatabaseAdministration.uspSeedPatientNHSNumberStatusIndicatorCode.sql" />
+    <Build Include="DatabaseAdministration\Stored Procedures\DatabaseAdministration.uspSeedPatientConsentObtainedIndicatorForNationalJointRegistryRecordingData.sql" />
+    <Build Include="DatabaseAdministration\Stored Procedures\DatabaseAdministration.uspSeedPatientConsentObtainedIndicatorForCareProfessionalContact.sql" />
+    <Build Include="DatabaseAdministration\Stored Procedures\DatabaseAdministration.uspCreateReferenceTable.sql" />
+    <Build Include="DataDictionary\Tables\DataDictionary.ClassUsage.sql" />
+    <Build Include="DataDictionary\Tables\DataDictionary.ClassRelationship.sql" />
+    <Build Include="DataDictionary\Tables\DataDictionary.ClassDescription.sql" />
+    <Build Include="DataDictionary\Tables\DataDictionary.ClassAttribute.sql" />
+    <Build Include="Security\DataDictionary.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Database Tools\SqlSchemaCompare.scmp" />

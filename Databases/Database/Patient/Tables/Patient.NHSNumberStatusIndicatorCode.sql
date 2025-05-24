@@ -1,5 +1,5 @@
 ﻿CREATE TABLE [Patient].[NHSNumberStatusIndicatorCode] (
-    [InternalKey]         SMALLINT      IDENTITY (1, 1) NOT NULL,
+    [InternalKey]         SMALLINT      NOT NULL,
     [DateTimeCreated]     DATETIME      CONSTRAINT [DF_NHSNumberStatusIndicatorCode_DateTimeCreated] DEFAULT (getdate()) NOT NULL,
     [DateTimeUpdated]     DATETIME      NULL,
     [DateTimeDeleted]     DATETIME      NULL,
@@ -7,8 +7,11 @@
     [ValidToDate]         DATE          CONSTRAINT [DF_NHSNumberStatusIndicatorCode_ValidToDate] DEFAULT ('9999-12-31') NOT NULL,
     [NationalCode]        CHAR (2)      NOT NULL,
     [NationalDescription] VARCHAR (500) NOT NULL,
+    [ShortDescription]    VARCHAR (50)  NULL,
     CONSTRAINT [PK_NHSNumberStatusIndicatorCode] PRIMARY KEY CLUSTERED ([InternalKey] ASC)
 );
+
+
 
 
 GO
